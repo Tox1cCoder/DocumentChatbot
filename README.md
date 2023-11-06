@@ -20,11 +20,13 @@ To get started with this project, follow these steps:
 
 1. **Clone the Repository**:
 
-    ```git clone https://github.com/Tox1cCoder/DocumentChatbot.git```
+    ```
+   git clone https://github.com/Tox1cCoder/DocumentChatbot.git
+    ```
 
     ```cd DocumentChatbot```
 
-2. **Environment Setup**:
+3. **Environment Setup**:
 - Create a virtual environment and activate it.
 - Install the required dependencies listed in `requirements.txt`.
 - Set up your Pinecone account and provide the necessary API keys.
