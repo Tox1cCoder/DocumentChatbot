@@ -24,7 +24,9 @@ To get started with this project, follow these steps:
    git clone https://github.com/Tox1cCoder/DocumentChatbot.git
     ```
 
-    ```cd DocumentChatbot```
+    ```
+   cd DocumentChatbot
+    ```
 
 3. **Environment Setup**:
 - Create a virtual environment and activate it.
