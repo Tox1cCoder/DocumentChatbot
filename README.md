@@ -1,6 +1,6 @@
-# Chatbot LLM Project
+# Document Chatbot Project
 
-Welcome to the Chatbot LLM project! This chatbot leverages the power of Pinecone vector databases, the language capabilities of GPT-3.5, and Langchain for learning and adapting to provide intelligent responses to user questions. The Streamlit framework is used for creating the user interface.
+This chatbot leverages the power of Pinecone vector databases, the language capabilities of GPT-3.5, and Langchain for learning and adapting to provide intelligent responses to user questions. The Streamlit framework is used for creating the user interface.
 
 ## Project Overview
 
@@ -20,21 +20,19 @@ To get started with this project, follow these steps:
 
 1. **Clone the Repository**:
 
-    `git clone https://github.com/your-username/chatbot-llm.git`
+    `git clone https://github.com/Tox1cCoder/DocumentChatbot.git`
 
-    `cd chatbot-llm`
+    `cd DocumentChatbot`
 
 2. **Environment Setup**:
 - Create a virtual environment and activate it.
 - Install the required dependencies listed in `requirements.txt`.
 - Set up your Pinecone account and provide the necessary API keys.
+- Set up your OpenAI API keys in environment variables.
 
 3. **Running the Application**:
 - Use Streamlit to run the application:
   ```
-  streamlit run app.py
+  streamlit run main.py
   ```
 - Access the chatbot interface via your web browser.
-
-4. **Interact with the Chatbot**:
-- Start interacting with the chatbot by asking questions or engaging in conversations.
