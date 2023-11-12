@@ -34,7 +34,9 @@ prompt_template = ChatPromptTemplate.from_messages(
 
 conversation = ConversationChain(memory=st.session_state.buffer_memory, prompt=prompt_template, llm=llm, verbose=True)
 
+# container for chat history
 response_container = st.container()
+# container for text box
 textcontainer = st.container()
 
 with textcontainer:
@@ -42,10 +44,12 @@ with textcontainer:
     if query:
         with st.spinner("typing..."):
             conversation_string = get_conversation_string()
+            # st.code(conversation_string)
             refined_query = query_refiner(conversation_string, query)
             st.subheader("Refined Query:")
             st.write(refined_query)
             context = find_match(refined_query)
+            # print(context)
             response = conversation.predict(input=f"Context:\n {context} \n\n Query:\n{query}")
         st.session_state.requests.append(query)
         st.session_state.responses.append(response)
