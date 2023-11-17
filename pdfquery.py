@@ -19,10 +19,16 @@ class PDFQuery:
 
     def ask(self, question: str) -> str:
         if self.chain is None:
-            response = "Please, add a document."
-        else:
-            docs = self.db.get_relevant_documents(question)
-            response = self.chain.run(input_documents=docs, question=question)
+            return "Please, add a document."
+
+        if self.db is None:
+            return "No documents have been added yet."
+
+        docs = self.db.get_relevant_documents(question)
+        if not docs:
+            return "This question is out of scope, not related to the content in the PDF."
+
+        response = self.chain.run(input_documents=docs, question=question)
         return response
 
     def ingest(self, file_path: os.PathLike) -> None:
