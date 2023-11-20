@@ -44,6 +44,7 @@ def get_qna_chain(vectorstore):
 
     memory = ConversationBufferMemory(
         memory_key='chat_history', return_messages=True)
+
     qna_agent = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=vectorstore.as_retriever(),
